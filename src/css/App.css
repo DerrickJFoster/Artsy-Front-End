@@ -1,0 +1,27 @@
+html {
+  background-color: ghostwhite;
+}
+
+.app {
+  text-align: center;
+}
+
+.app-header {
+  background-color: #282c34;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 5%;
+}
+
+#keyword, #submit {
+  margin: 0 1%;
+}
+
+img {
+  width: 200px;
+}

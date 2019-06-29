@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import SearchArt from "./components/SearchArt.js"
+import PostTest from "./components/PostTest.js"
+import "./css/normalize.css"
+import "./css/skeleton.css"
+import "./css/App.css";
 
 class App extends Component {
+  state = {
+    id: ""
+  }
   render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+      <div className="app">
+        <header className="app-header">
+          <h1>kickstART</h1>
+          <p>Find Inspiration And Spark Creativity</p>
+        </header>
+        <SearchArt />
+        <PostTest />
+      </div>
+    );
+  }
 }
-}
+
 export default App;
