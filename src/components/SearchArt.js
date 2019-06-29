@@ -1,10 +1,11 @@
 import React, { Component } from "react"
-const baseURL = "https://www.rijksmuseum.nl/api/en/collection?key=5p5zT3Jl&format=json&s=relevance&imgonly=true&ps=20&q="
+const baseURL = "https://www.rijksmuseum.nl/api/en/collection?key=5p5zT3Jl&format=json&s=relevance&imgonly=true&ps=12&q="
+const saveURL = "https://kickstart-me.herokuapp.com/art"
 
 class SearchArt extends Component {
   state = {
     keyword: "",
-    art: {}
+    art: []
   }
   handleChange = (event) => {
     this.setState({
@@ -16,8 +17,27 @@ class SearchArt extends Component {
     fetch(baseURL+this.state.keyword)
     .then(data => data.json(), error => console.log(error))
     .then(jsonData => this.setState({
-      art: jsonData,
+      art: jsonData.artObjects,
       keyword: ""
+    }), error => console.log(error))
+  }
+  saveArt = (art) => {
+    console.log(art.longTitle, art.webImage.url);
+    fetch(saveURL, {
+      method: "POST",
+      body: JSON.stringify({
+        title: art.longTitle,
+        imageurl: art.webImage.url,
+        usernotes: "",
+        userid: ""
+      }),
+      headers: {
+        "Content-Type":"application/json"
+      }
+    })
+    .then(data => data.json(), error => console.log(error))
+    .then(jsonData => this.setState({
+      apiResponse: jsonData
     }), error => console.log(error))
   }
   render() {
@@ -38,6 +58,24 @@ class SearchArt extends Component {
             value="Get Inspiration"
           />
         </form>
+        <div className="show-art">
+          {
+            this.state.art.map((art) => {
+              return (
+                <div className="art-piece" key={art.id}>
+                  <h5>{art.longTitle}</h5>
+                  <p>{art.principalOrFirstMaker}</p>
+                  <img src={art.webImage.url} alt={art.title}/>
+                  <button
+                    onClick={() => {
+                      this.saveArt(art)
+                    }}
+                    >Add To Favorites</button>
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
     )
   }
