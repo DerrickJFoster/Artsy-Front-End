@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Artsy-Front-End/static/css/main.2cce8147.chunk.css",
+    "main.js": "/Artsy-Front-End/static/js/main.4435caec.chunk.js",
+    "main.js.map": "/Artsy-Front-End/static/js/main.4435caec.chunk.js.map",
+    "runtime~main.js": "/Artsy-Front-End/static/js/runtime~main.f2e93413.js",
+    "runtime~main.js.map": "/Artsy-Front-End/static/js/runtime~main.f2e93413.js.map",
+    "static/js/2.6efc73d3.chunk.js": "/Artsy-Front-End/static/js/2.6efc73d3.chunk.js",
+    "static/js/2.6efc73d3.chunk.js.map": "/Artsy-Front-End/static/js/2.6efc73d3.chunk.js.map",
+    "index.html": "/Artsy-Front-End/index.html",
+    "precache-manifest.a921b05be2eec80213ed8fe3f4ddc0c3.js": "/Artsy-Front-End/precache-manifest.a921b05be2eec80213ed8fe3f4ddc0c3.js",
+    "service-worker.js": "/Artsy-Front-End/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/Artsy-Front-End/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/Artsy-Front-End/static/media/logo.5d5d9eef.svg"
+  }
+}
