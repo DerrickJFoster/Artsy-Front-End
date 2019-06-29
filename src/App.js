@@ -3,6 +3,7 @@ import SearchArt from "./components/SearchArt.js"
 import "./css/normalize.css"
 import "./css/skeleton.css"
 import "./css/App.css";
+import Update from './components/Update.js'
 
 class App extends Component {
   state = {
@@ -16,6 +17,7 @@ class App extends Component {
           <p>Find Inspiration And Spark Creativity</p>
         </header>
         <SearchArt />
+        <Update />
       </div>
     );
   }
