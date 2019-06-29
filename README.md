@@ -1,2 +1,2 @@
 #kickstART
-![UIwireframe](UI-wireframe.PNG)
+![UIwireframe](public/UI-wireframe.PNG)
