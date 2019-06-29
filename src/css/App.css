@@ -21,3 +21,7 @@ html {
 #keyword, #submit {
   margin: 0 1%;
 }
+
+img {
+  width: 200px;
+}
