@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Artsy-Front-End/precache-manifest.6148daa8c34fcfc463415fade2a4d1fe.js"
+  "/Artsy-Front-End/precache-manifest.be07cbad0275d31c4ee599c23a484a39.js"
 );
 
 self.addEventListener('message', (event) => {
