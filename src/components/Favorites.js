@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import UpdateIdeas from "./UpdateIdeas.js"
 const baseURL = "https://kickstart-me.herokuapp.com/art"
 
 class Favorites extends Component {
@@ -73,6 +74,7 @@ class Favorites extends Component {
       })
     })
   }
+  //Calling getFavorites once the component is ready
   componentDidMount() {
     this.getFavorites()
   }
@@ -89,26 +91,10 @@ class Favorites extends Component {
                 <img src={fav.imageurl} alt={fav.title}/>
                 {
                   fav.usernotes ?
-                  <div className="usernotes">
-                    <h5>Your Ideas:</h5>
-                    <form onSubmit={this.saveIdeas}>
-                      <input
-                        id="usernotes"
-                        className="eight column"
-                        type="text"
-                        placeholder={fav.usernotes}
-                        onChange={this.handleChange}
-                      />
-                      <input type="submit"
-                        value="Update Ideas"
-                      />
-                    </form>
-                    <button
-                      onClick={() => {
-                        this.deleteFavorite(fav)
-                      }}
-                      >Delete</button>
-                  </div>
+                  <UpdateIdeas
+                    fav={fav}
+                    deleteFavorite={this.deleteFavorite}
+                  />
                   :
                     this.state.showUpdateId === fav._id ?
                     <form onSubmit={this.saveIdeas}>

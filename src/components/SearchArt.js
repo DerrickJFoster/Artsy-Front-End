@@ -22,7 +22,6 @@ class SearchArt extends Component {
     }), error => console.log(error))
   }
   saveArt = (art) => {
-    console.log(art.longTitle, art.webImage.url);
     fetch(saveURL, {
       method: "POST",
       body: JSON.stringify({
@@ -43,6 +42,7 @@ class SearchArt extends Component {
   render() {
     return (
       <div className="search-art">
+        <h2>Search by Keyword and Get Inspired</h2>
         <form onSubmit={this.getArt}>
           <input
             id="keyword"
