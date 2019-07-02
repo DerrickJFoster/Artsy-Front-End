@@ -5,7 +5,7 @@ class Account extends Component {
   state = {
     username: "",
     password: "",
-    action: ""
+    action: this.props.action
   }
   handleChange = (event) => {
     this.setState({

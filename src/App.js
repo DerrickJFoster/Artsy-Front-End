@@ -10,7 +10,7 @@ import "./css/App.css";
 
 class App extends Component {
   state = {
-    id: ""
+    id: "testing234098234"
   }
   render() {
     return (
@@ -25,9 +25,15 @@ class App extends Component {
             <Link to="/favorites">Your Favorites</Link>{" |  "}
             <Link to="/account">Log In or Create Your Account</Link>
           </nav>
-            <Route path="/search" component={SearchArt}></Route>
-            <Route path="/favorites" component={Favorites}></Route>
-            <Route path="/account" component={Account}></Route>
+            <Route path="/search"
+            render={(props) => <SearchArt {...props} id={this.state.id}/>}
+            />
+            <Route path="/favorites"
+            render={(props) => <Favorites {...props} id={this.state.id}/>}
+            />
+            <Route path="/account"
+            render={(props) => <Account {...props} id={this.state.id} action=""/>}
+            />
         </Router>
       </div>
     );
