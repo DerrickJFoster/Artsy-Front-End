@@ -1,22 +1,21 @@
 import React, { Component } from "react"
 const baseURL = "https://kickstart-me.herokuapp.com/art"
 
-class PostArt extends Component {
+class UpdateIdeas extends Component {
   state = {
-    title: ""
+    usernotes: this.props.fav.usernotes
   }
   handleChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
     })
   }
-  postArt = (event) => {
+  saveIdeas = (event) => {
     event.preventDefault()
-    console.log(this.state.title, baseURL);
-    fetch(baseURL, {
-      method: "POST",
+    fetch(baseURL+"/"+this.props.fav._id, {
+      method: "PUT",
       body: JSON.stringify({
-        title: this.state.title
+        usernotes: this.state.usernotes
       }),
       headers: {
         "Content-Type":"application/json"
@@ -24,31 +23,33 @@ class PostArt extends Component {
     })
     .then(data => data.json(), error => console.log(error))
     .then(jsonData => this.setState({
-      title: "",
       apiResponse: jsonData
     }), error => console.log(error))
   }
   render() {
     return (
-      <div className="post-test">
-        <form onSubmit={this.postArt}>
+      <div className="ideas">
+        <h5>Your Ideas:</h5>
+        <form onSubmit={this.saveIdeas}>
           <input
-            id="title"
+            id="usernotes"
+            className="eight column"
             type="text"
-            placeholder="title"
-            value={this.state.title}
+            value={this.state.usernotes}
             onChange={this.handleChange}
           />
-          <input
-            id="submit"
-            className="button-primary"
-            type="submit"
-            value="Post To Andrew"
+          <input type="submit"
+            value="Save"
           />
         </form>
+        <button
+          onClick={() => {
+            this.props.deleteFavorite(this.props.fav)
+          }}
+          >Delete</button>
       </div>
     )
   }
 }
 
-export default PostArt
+export default UpdateIdeas
