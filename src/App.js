@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import SearchArt from "./components/SearchArt.js"
 import Favorites from "./components/Favorites.js"
-//import PostTest from "./components/PostTest.js"
+import Account from "./components/Account.js"
+import { BrowserRouter as Router, Route, Link} from "react-router-dom"
 import "./css/normalize.css"
 import "./css/skeleton.css"
+<<<<<<< HEAD
 import "./css/App.css"
 import Update from './components/Update.js'
+=======
+import "./css/App.css";
+//import Update from './components/Update.js'
+>>>>>>> e1411ccc1ae4334abb81c9c35bf751e30f6d0e19
 
 class App extends Component {
   state = {
-    id: ""
+    id: "testing234098234"
   }
   render() {
     return (
@@ -18,9 +24,22 @@ class App extends Component {
           <h1>kickstART</h1>
           <h2>Find Inspiration And Spark Creativity</h2>
         </header>
-        <SearchArt />
-        <Favorites />
-
+        <Router>
+          <nav>
+            <Link to="/search">Search For Art</Link>{" | "}
+            <Link to="/favorites">Your Favorites</Link>{" |  "}
+            <Link to="/account">Log In or Create Your Account</Link>
+          </nav>
+            <Route path="/search"
+            render={(props) => <SearchArt {...props} id={this.state.id}/>}
+            />
+            <Route path="/favorites"
+            render={(props) => <Favorites {...props} id={this.state.id}/>}
+            />
+            <Route path="/account"
+            render={(props) => <Account {...props} id={this.state.id} action=""/>}
+            />
+        </Router>
       </div>
     );
   }
