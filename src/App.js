@@ -22,7 +22,6 @@ class App extends Component {
         <Account />
         <SearchArt />
         <Favorites />
-
       </div>
     );
   }

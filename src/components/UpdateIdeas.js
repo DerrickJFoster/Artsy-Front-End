@@ -3,7 +3,8 @@ const baseURL = "https://kickstart-me.herokuapp.com/art"
 
 class UpdateIdeas extends Component {
   state = {
-    usernotes: this.props.fav.usernotes
+    usernotes: this.props.fav.usernotes,
+    changesSaved: false
   }
   handleChange = (event) => {
     this.setState({
@@ -23,7 +24,8 @@ class UpdateIdeas extends Component {
     })
     .then(data => data.json(), error => console.log(error))
     .then(jsonData => this.setState({
-      apiResponse: jsonData
+      apiResponse: jsonData,
+      changesSaved: true
     }), error => console.log(error))
   }
   render() {
@@ -42,6 +44,11 @@ class UpdateIdeas extends Component {
             value="Save"
           />
         </form>
+        {
+          this.state.changesSaved ?
+          <p>Changes Saved</p>
+          : null
+        }
         <button
           onClick={() => {
             this.props.deleteFavorite(this.props.fav)
