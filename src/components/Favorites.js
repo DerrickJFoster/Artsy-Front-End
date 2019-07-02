@@ -79,7 +79,7 @@ class Favorites extends Component {
   render() {
     return (
       <div className="favorites container">
-        <h2>Your Saved Favorites</h2>
+        <h3>Your Saved Favorites</h3>
         {
           this.state.favorites.map((fav) => {
             return (
