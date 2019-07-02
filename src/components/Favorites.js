@@ -74,6 +74,7 @@ class Favorites extends Component {
       })
     })
   }
+  //Calling getFavorites once the component is ready
   componentDidMount() {
     this.getFavorites()
   }
