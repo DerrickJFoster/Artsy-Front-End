@@ -5,8 +5,8 @@ import Account from "./components/Account.js"
 import { BrowserRouter as Router, Route, Link} from "react-router-dom"
 import "./css/normalize.css"
 import "./css/skeleton.css"
-import "./css/App.css";
-//import Update from './components/Update.js'
+import "./css/App.css"
+
 
 class App extends Component {
   state = {
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1>kickstART</h1>
-          <p>Find Inspiration And Spark Creativity</p>
+          <h2>Find Inspiration And Spark Creativity</h2>
         </header>
         <Router>
           <nav>
