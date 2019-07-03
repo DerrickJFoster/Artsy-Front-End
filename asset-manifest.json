@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Artsy-Front-End/static/css/main.1fd1e6d0.chunk.css",
-    "main.js": "/Artsy-Front-End/static/js/main.b888f4c8.chunk.js",
-    "main.js.map": "/Artsy-Front-End/static/js/main.b888f4c8.chunk.js.map",
+    "main.css": "/Artsy-Front-End/static/css/main.3008cd45.chunk.css",
+    "main.js": "/Artsy-Front-End/static/js/main.dba859c7.chunk.js",
+    "main.js.map": "/Artsy-Front-End/static/js/main.dba859c7.chunk.js.map",
     "runtime~main.js": "/Artsy-Front-End/static/js/runtime~main.f2e93413.js",
     "runtime~main.js.map": "/Artsy-Front-End/static/js/runtime~main.f2e93413.js.map",
-    "static/js/2.1cf15e3f.chunk.js": "/Artsy-Front-End/static/js/2.1cf15e3f.chunk.js",
-    "static/js/2.1cf15e3f.chunk.js.map": "/Artsy-Front-End/static/js/2.1cf15e3f.chunk.js.map",
+    "static/js/2.38db990c.chunk.js": "/Artsy-Front-End/static/js/2.38db990c.chunk.js",
+    "static/js/2.38db990c.chunk.js.map": "/Artsy-Front-End/static/js/2.38db990c.chunk.js.map",
     "index.html": "/Artsy-Front-End/index.html",
-    "precache-manifest.59da76b72cbabfb6a178af2bcd09fe5a.js": "/Artsy-Front-End/precache-manifest.59da76b72cbabfb6a178af2bcd09fe5a.js",
+    "precache-manifest.5be9262e463ee7cde052b631da06a5eb.js": "/Artsy-Front-End/precache-manifest.5be9262e463ee7cde052b631da06a5eb.js",
     "service-worker.js": "/Artsy-Front-End/service-worker.js",
-    "static/css/main.1fd1e6d0.chunk.css.map": "/Artsy-Front-End/static/css/main.1fd1e6d0.chunk.css.map",
+    "static/css/main.3008cd45.chunk.css.map": "/Artsy-Front-End/static/css/main.3008cd45.chunk.css.map",
     "static/media/App.css": "/Artsy-Front-End/static/media/header-background-image.4af26728.PNG"
   }
 }
