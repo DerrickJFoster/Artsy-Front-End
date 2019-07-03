@@ -9,8 +9,8 @@ class Favorites extends Component {
     usernotes: ""
   }
   getFavorites = () => {
-    fetch(baseURL
-      //+"/"+this.props.id
+    console.log(baseURL+"/"+this.props.id)
+    fetch(baseURL+"/"+this.props.id
     )
     .then((data) => {
       return data.json()
