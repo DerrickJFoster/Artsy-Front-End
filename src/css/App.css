@@ -14,7 +14,7 @@ html {
 .app {
   text-align: center;
 }
-
+/* HEADER */
 .app-header {
   /* background-color: #282c34; */
   background-image: url("./UI-images/header-background-image.PNG");
@@ -39,6 +39,33 @@ h2 {
   padding-top: 0px;
   color: #092f80;
 }
+/* NAV BAR */
+nav {
+  margin: 0;
+  overflow: hidden;
+  list-style-type: none;
+  padding: 14px 16px;
+  width: 50%;
+  display: inline-block;
+  border-top: 2px solid #8DBEE8;
+  border-bottom: 2px solid #8DBEE8;
+  background-color: #092f80;
+
+}
+a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 40px;
+}
+a:hover {
+  background-color: #8DBEE8;
+  color: #092f80;
+  border-top: 2px solid #092f80;
+  border-bottom: 2px solid #092f80;
+}
+
+/* SEARCH BAR */
 #keyword {
   margin: 0 8px;
   border-radius: 25px;
@@ -55,6 +82,8 @@ h2 {
   margin: 0 8px;
   border-radius: 25px;
 }
+
+/* IMAGES */
 img {
   width: 200px;
 }
