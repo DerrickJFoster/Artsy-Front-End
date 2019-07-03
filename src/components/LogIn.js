@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-const baseURL = "https://kickstart-me.herokuapp.com/users"
+const baseURL = "https://kickstart-me.herokuapp.com/users/login"
 
-class Account extends Component {
+class LogIn extends Component {
   state = {
     username: "",
     password: "",
@@ -12,7 +12,7 @@ class Account extends Component {
       [event.target.id]: event.target.value
     })
   }
-  createAccount = (event) => {
+  logIn = (event) => {
     event.preventDefault()
     fetch(baseURL, {
       method: "POST",
@@ -27,21 +27,29 @@ class Account extends Component {
       console.log(error)
     })
     .then((jsonData) => {
-      console.log(jsonData)
       this.setState({
         apiResponse: jsonData,
         username: "",
         password: ""
       })
-      this.props.updateUserId(jsonData)
+      if (jsonData.error) {
+        this.setState({
+          error: jsonData.error
+        })
+      } else {
+        this.setState({
+          error: ""
+        })
+        this.props.updateUserId(jsonData)
+      }
     })
   }
   render() {
     return (
-          <div className="account-create-form">
-            <h2>Join kickstART</h2>
-            <form className="account-create"
-              onSubmit={this.createAccount}
+          <div className="account-login-form">
+            <h2>Log In</h2>
+            <form className="account-login"
+              onSubmit={this.logIn}
               >
               <input
                 id="username"
@@ -58,15 +66,16 @@ class Account extends Component {
                 onChange={this.handleChange}
               />
               <input
-                id="submit-account"
+                id="submit-login"
                 className="button-primary"
                 type="submit"
-                value="Create Account"
+                value="Log In"
               />
             </form>
+            <p className="error">{this.state.error}</p>
           </div>
     )
   }
 }
 
-export default Account
+export default LogIn
