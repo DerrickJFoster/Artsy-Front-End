@@ -5,7 +5,8 @@ const saveURL = "https://kickstart-me.herokuapp.com/art"
 class SearchArt extends Component {
   state = {
     keyword: "",
-    art: []
+    art: [],
+    favs: []
   }
   handleChange = (event) => {
     this.setState({
