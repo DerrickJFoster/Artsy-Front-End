@@ -19,7 +19,7 @@ html {
   /* background-color: #282c34; */
   background-image: url("./UI-images/header-background-image.PNG");
   background-repeat: no-repeat;
-  background-position: 75% center;
+  background-position: 68% center;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -44,19 +44,23 @@ nav {
   margin: 0;
   overflow: hidden;
   list-style-type: none;
-  padding: 14px 16px;
-  width: 50%;
+  width: 40%;
+  height: 5vh;
+  vertical-align: center;
+  line-height: 5vh;
   display: inline-block;
   border-top: 2px solid #8DBEE8;
   border-bottom: 2px solid #8DBEE8;
   background-color: #092f80;
-
+  clear: both;
 }
 a {
   color: white;
   text-align: center;
   text-decoration: none;
-  padding: 40px;
+  /* background: green; */
+  width: 30%;
+  margin: 2vw;
 }
 a:hover {
   background-color: #8DBEE8;
