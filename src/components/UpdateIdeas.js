@@ -35,7 +35,6 @@ class UpdateIdeas extends Component {
         <form onSubmit={this.saveIdeas}>
           <input
             id="usernotes"
-            className="eight column"
             type="text"
             value={this.state.usernotes}
             onChange={this.handleChange}
