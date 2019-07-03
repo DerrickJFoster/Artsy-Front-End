@@ -14,8 +14,6 @@ html {
 .app {
   text-align: center;
 }
-
-
 /* HEADER */
 .app-header {
   /* background-color: #282c34; */
@@ -41,12 +39,14 @@ h2 {
   padding-top: 0px;
   color: #092f80;
 }
+
 h5 {
   font-family: Arial;
   padding-top: 0px;
   color: #092f80;
   text-transform: uppercase;
 }
+
 /* NAV BAR */
 nav {
   margin: 0;
@@ -59,6 +59,7 @@ nav {
   display: inline-block;
   border-top: 2px solid #8DBEE8;
   border-bottom: 2px solid #8DBEE8;
+
   clear: both;
   background-color: #092f80;
   box-shadow: 0 8px 6px -6px black;
@@ -67,6 +68,7 @@ a {
   color: white;
   text-align: center;
   text-decoration: none;
+
   width: 30%;
   margin: 3vw;
 }
@@ -127,6 +129,7 @@ a {
   padding: 20px;
   box-shadow: 0 8px 6px -6px black;
 }
+
 img {
   /* background-image: url("./UI-images/canvas.PNG"); */
   padding: 20px;
