@@ -28,7 +28,7 @@ class SearchArt extends Component {
         title: art.longTitle,
         imageurl: art.webImage.url,
         usernotes: "",
-        userid: ""
+        userid: this.props.id
       }),
       headers: {
         "Content-Type":"application/json"

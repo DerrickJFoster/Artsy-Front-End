@@ -41,7 +41,7 @@ class UpdateIdeas extends Component {
             onChange={this.handleChange}
           />
           <input type="submit"
-            value="Save"
+            value="Update Ideas"
           />
         </form>
         {
