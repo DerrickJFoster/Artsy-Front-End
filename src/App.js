@@ -31,12 +31,14 @@ class App extends Component {
         <Router>
             {
               this.state.id !== "" ?
-              <nav>
-                <p className="logged-in-user">Hello {this.state.username}</p>
-                <Link to="/search">Search For Art</Link>
-                <Link to="/favorites">Your Favorites</Link>
-                <Link to="/account">Log Out</Link>
-              </nav>
+              <React.Fragment>
+                <h5 className="logged-in-user">Hello {this.state.username}</h5>
+                <nav>
+                  <Link to="/search">Search For Art</Link>
+                  <Link to="/favorites">Your Favorites</Link>
+                  <Link to="/account">Log Out</Link>
+                </nav>
+              </React.Fragment>
               :
               <nav>
                 <Link to="/search">Search For Art</Link>
