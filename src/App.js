@@ -6,12 +6,7 @@ import { BrowserRouter as Router, Route, Link} from "react-router-dom"
 import "./css/normalize.css"
 import "./css/skeleton.css"
 import "./css/App.css";
-//import Update from './components/Update.js'
->>>>>>> e1411ccc1ae4334abb81c9c35bf751e30f6d0e19
-=======
-import "./css/App.css"
 
->>>>>>> acce4bb44c710941f7dbc9f33e1d0d73da0dc8c0
 
 class App extends Component {
   state = {
