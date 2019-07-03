@@ -14,8 +14,6 @@ class App extends Component {
     id: ""
   }
   updateUserId = (user) => {
-    console.log(user)
-    console.log(user.id);
     this.setState({
       username: user.username,
       id: user.id
@@ -54,6 +52,8 @@ class App extends Component {
                 <Link to="/account">Join</Link>
               </nav>
             }
+            <Route path="/" exact component={SearchArt}
+            />
             <Route path="/search"
             render={(props) => <SearchArt {...props} id={this.state.id}/>}
             />
