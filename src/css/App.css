@@ -1,3 +1,12 @@
+@font-face {
+  font-family: calligraphy;
+  src: url("./Fonts/billy-argel_calligraphy/calligraphy wet.ttf");
+}
+@font-face {
+  font-family: cat;
+  src: url("./Fonts/graphic-cat/GraphicCAT.ttf");
+}
+
 html {
   background-color: ghostwhite;
 }
@@ -5,24 +14,80 @@ html {
 .app {
   text-align: center;
 }
-
+/* HEADER */
 .app-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: url("./UI-images/header-background-image.PNG");
+  background-repeat: no-repeat;
+  background-position: 68% center;
   height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 4vmin);
+  font-family: calligraphy;
   color: white;
   margin-bottom: 5%;
   padding-top: 5%;
 }
-
-#keyword, #submit {
-  margin: 0 1%;
+h1 {
+  font-size: 4em;;
+}
+h2 {
+  font-family: cat;
+  padding-top: 0px;
+  color: #092f80;
+}
+/* NAV BAR */
+nav {
+  margin: 0;
+  overflow: hidden;
+  list-style-type: none;
+  width: 40%;
+  height: 5vh;
+  vertical-align: center;
+  line-height: 5vh;
+  display: inline-block;
+  border-top: 2px solid #8DBEE8;
+  border-bottom: 2px solid #8DBEE8;
+  background-color: #092f80;
+  clear: both;
+}
+a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* background: green; */
+  width: 30%;
+  margin: 2vw;
+}
+a:hover {
+  background-color: #8DBEE8;
+  color: #092f80;
+  border-top: 2px solid #092f80;
+  border-bottom: 2px solid #092f80;
 }
 
+/* SEARCH BAR */
+#keyword {
+  margin: 0 8px;
+  border-radius: 25px;
+  width: 20%;
+}
+#submit {
+  background-color: #092f80;
+  margin: 0 8px;
+  border-radius: 25px;
+  border: none;
+}
+#submit:hover {
+  background-color: #8DBEE8;
+  margin: 0 8px;
+  border-radius: 25px;
+}
+
+/* IMAGES */
 img {
   width: 200px;
 }

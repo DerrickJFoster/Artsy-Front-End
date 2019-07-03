@@ -8,6 +8,7 @@ import "./css/normalize.css"
 import "./css/skeleton.css"
 import "./css/App.css";
 
+
 class App extends Component {
   state = {
     username: "",
@@ -26,7 +27,7 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1>kickstART</h1>
-          <p>Find Inspiration And Spark Creativity</p>
+          <h2>Find Inspiration And Spark Creativity</h2>
         </header>
         <Router>
             {
