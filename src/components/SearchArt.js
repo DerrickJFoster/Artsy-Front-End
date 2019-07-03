@@ -5,7 +5,8 @@ const saveURL = "https://kickstart-me.herokuapp.com/art"
 class SearchArt extends Component {
   state = {
     keyword: "",
-    art: []
+    art: [],
+    favs: []
   }
   handleChange = (event) => {
     this.setState({
@@ -36,9 +37,17 @@ class SearchArt extends Component {
       }
     })
     .then(data => data.json(), error => console.log(error))
-    .then(jsonData => this.setState({
-      apiResponse: jsonData
-    }), error => console.log(error))
+    .then((jsonData) => {
+      const copyFavs = [...this.state.favs]
+      copyFavs.push(art.id)
+      console.log(copyFavs)
+      this.setState({
+        apiResponse: jsonData,
+        favs: copyFavs
+      })
+    }, (error) => {
+      console.log(error)
+    })
   }
   render() {
     return (
@@ -69,6 +78,9 @@ class SearchArt extends Component {
                   <img src={art.webImage.url} alt={art.title}/>
                   <br/>
                   {
+                    this.props.id !== "" && this.state.favs.indexOf(art.id) >= 0 ?
+                    <h4>Saved to Favorites!</h4>
+                    :
                     this.props.id !== "" ?
                     <button
                       id="save-to-favorities"
@@ -77,11 +89,11 @@ class SearchArt extends Component {
                       }}
                       >Save To Favorites</button>
                       :
-                    <div className="log-in-or-join">
-                      <h6>Log In or Join to Save your Favorites</h6>
-                      <a href="/login" className="button">Log In</a>
-                      <a href="/account" className="button">Join</a>
-                    </div>
+                      <div className="log-in-or-join">
+                        <h6>Log In or Join to Save your Favorites</h6>
+                        <a href="/login" className="button">Log In</a>
+                        <a href="/account" className="button">Join</a>
+                      </div>
                   }
                 </div>
               )
