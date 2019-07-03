@@ -28,6 +28,7 @@ class SearchArt extends Component {
         title: art.longTitle,
         imageurl: art.webImage.url,
         usernotes: "",
+        artist: art.principalOrFirstMaker,
         userid: this.props.id
       }),
       headers: {
@@ -66,11 +67,22 @@ class SearchArt extends Component {
                   <h5>{art.longTitle}</h5>
                   <p>{art.principalOrFirstMaker}</p>
                   <img src={art.webImage.url} alt={art.title}/>
-                  <button
-                    onClick={() => {
-                      this.saveArt(art)
-                    }}
-                    >Add To Favorites</button>
+                  <br/>
+                  {
+                    this.props.id !== "" ?
+                    <button
+                      id="save-to-favorities"
+                      onClick={() => {
+                        this.saveArt(art)
+                      }}
+                      >Save To Favorites</button>
+                      :
+                    <div className="log-in-or-join">
+                      <h6>Log In or Join to Save your Favorites</h6>
+                      <a href="/login" className="button">Log In</a>
+                      <a href="/account" className="button">Join</a>
+                    </div>
+                  }
                 </div>
               )
             })
