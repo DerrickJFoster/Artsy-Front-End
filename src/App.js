@@ -21,6 +21,12 @@ class App extends Component {
       id: user.id
     })
   }
+  logOut = () => {
+    this.setState({
+      username: "",
+      id: ""
+    })
+  }
   render() {
     return (
       <div className="app">
@@ -36,7 +42,9 @@ class App extends Component {
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
-                  <Link to="/account">Log Out</Link>
+                  <a href="#"
+                    onClick={this.logOut}
+                    >Log Out</a>
                 </nav>
               </React.Fragment>
               :
