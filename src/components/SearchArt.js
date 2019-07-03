@@ -66,11 +66,12 @@ class SearchArt extends Component {
                   <h5>{art.longTitle}</h5>
                   <p>{art.principalOrFirstMaker}</p>
                   <img src={art.webImage.url} alt={art.title}/>
+                  <br/>
                   <button
                     onClick={() => {
                       this.saveArt(art)
                     }}
-                    >Add To Favorites</button>
+                    >Save To Favorites</button>
                 </div>
               )
             })
