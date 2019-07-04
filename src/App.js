@@ -31,12 +31,16 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1>kickstART</h1>
-          <h2>Find Inspiration And Spark Creativity</h2>
+          {
+            this.state.id !== "" ?
+            <h2>Find Inspiration And Spark Creativity | {this.state.username}</h2>
+            :
+            <h2>Find Inspiration And Spark Creativity</h2>
+          }
         </header>
         <Router>
             {
               this.state.id !== "" ?
-              <React.Fragment>
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
@@ -44,8 +48,6 @@ class App extends Component {
                     onClick={this.logOut}
                     >Log Out</a>
                 </nav>
-                <h5 className="logged-in-user">Hello {this.state.username}</h5>
-              </React.Fragment>
               :
               <nav>
                 <Link to="/search">Search For Art</Link>
