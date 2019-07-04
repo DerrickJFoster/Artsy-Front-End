@@ -98,18 +98,19 @@ class Favorites extends Component {
                   :
                     this.state.showUpdateId === fav._id ?
                     <form onSubmit={this.saveIdeas}>
-                      <input
-                        className="eight columns"
-                        type="text"
-                        id="usernotes"
-                        name="usernotes"
-                        value={this.state.usernotes}
-                        onChange={this.handleChange}
-                      />
-                      <input type="submit"
-                        className="button-primary"
-                        value="Save Ideas"
-                      />
+                        <input
+                          className="eight columns"
+                          type="text"
+                          id="usernotes"
+                          name="usernotes"
+                          value={this.state.usernotes}
+                          onChange={this.handleChange}
+                        />
+                        <input type="submit"
+                          id="save-ideas"
+                          className="button-primary"
+                          value="Save Ideas"
+                        />
                     </form>
                     :
                     <div className="actions">
