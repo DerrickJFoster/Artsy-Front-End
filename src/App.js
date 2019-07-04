@@ -36,7 +36,6 @@ class App extends Component {
             {
               this.state.id !== "" ?
               <React.Fragment>
-                <h5 className="logged-in-user">Hello {this.state.username}</h5>
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
@@ -44,6 +43,7 @@ class App extends Component {
                     onClick={this.logOut}
                     >Log Out</a>
                 </nav>
+                <h5 className="logged-in-user">Hello {this.state.username}</h5>
               </React.Fragment>
               :
               <nav>
