@@ -33,9 +33,9 @@ class App extends Component {
           <h1>kickstART</h1>
           {
             this.state.id !== "" ?
-            <h2>Find Inspiration And Spark Creativity | {this.state.username}</h2>
+            <h2 className='tracking-in-expand'>Find Inspiration And Spark Creativity | {this.state.username}</h2>
             :
-            <h2>Find Inspiration And Spark Creativity</h2>
+            <h2 className='tracking-in-expand'>Find Inspiration And Spark Creativity</h2>
           }
         </header>
         <Router>

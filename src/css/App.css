@@ -43,22 +43,73 @@ h2, h3 {
   font-family: cat;
   color: #092f80;
 }
-
 h5 {
   font-family: Arial;
+  font-weight: bold;
   padding-top: 0px;
   color: #092f80;
-  text-transform: uppercase;
+  text-shadow: .5px .5px black;
+  }
+
+h6 {
+  font-family: Arial;
+  padding-top: 0px;
+   animation-name: h6;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
 }
+/**
+ * ----------------------------------------
+ * animation Flash
+ * ----------------------------------------
+ */
+@keyframes h6 {
+    from {color: rgb(141, 190, 232, .2);}
+    to {color: #092f80;}
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 5s cubic-bezier(0, 1, 0, 1) both;
+	        animation: tracking-in-expand 5.2s cubic-bezier(0, 1, 0, 1) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .search-art > h2 {
   font-size: 2em;
 }
-
-/* .logged-in-user {
-  font-family: calligraphy;
-  font-size: 70px;
-  text-transform: capitalize;
-} */
 
 /* NAV BAR */
 nav {
@@ -150,7 +201,6 @@ button:hover,.button:hover, .button-primary:hover{
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 20px;
-   text-shadow: .5px .5px black;
 }
 
 .fav {
