@@ -52,7 +52,8 @@ class App extends Component {
                 <Link to="/account">Join</Link>
               </nav>
             }
-            <Route path="/" exact component={SearchArt}
+            <Route path="/" exact
+            render={(props) => <SearchArt {...props} id={this.state.id}/>}
             />
             <Route path="/search"
             render={(props) => <SearchArt {...props} id={this.state.id}/>}
