@@ -68,13 +68,14 @@ nav {
   margin-bottom: 2%;
   overflow: hidden;
   list-style-type: none;
-  width: 60%;
+  width: 62%;
   height: 5vh;
   vertical-align: center;
   line-height: 5vh;
   display: inline-block;
   border-top: 2px solid #8DBEE8;
   border-bottom: 2px solid #8DBEE8;
+  border-radius: 10px;
   background-color: #092f80;
   box-shadow: 0 8px 6px -6px black;
 }
