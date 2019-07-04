@@ -37,7 +37,6 @@ class App extends Component {
             {
               this.state.id !== "" ?
               <React.Fragment>
-                <h5 className="logged-in-user">Hello {this.state.username}</h5>
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
@@ -45,6 +44,7 @@ class App extends Component {
                     onClick={this.logOut}
                     >Log Out</a>
                 </nav>
+                <h5 className="logged-in-user">Hello {this.state.username}</h5>
               </React.Fragment>
               :
               <nav>
@@ -53,7 +53,8 @@ class App extends Component {
                 <Link to="/account">Join</Link>
               </nav>
             }
-            <Route path="/" exact component={SearchArt}
+            <Route path="/" exact
+            render={(props) => <SearchArt {...props} id={this.state.id}/>}
             />
             <Route path="/search"
             render={(props) => <SearchArt {...props} id={this.state.id}/>}
