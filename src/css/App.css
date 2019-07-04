@@ -54,6 +54,12 @@ h5 {
   font-size: 2em;
 }
 
+/* .logged-in-user {
+  font-family: calligraphy;
+  font-size: 70px;
+  text-transform: capitalize;
+} */
+
 /* NAV BAR */
 nav {
   font-size: 2vw;
