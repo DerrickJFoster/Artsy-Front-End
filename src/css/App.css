@@ -38,7 +38,7 @@ html {
 h1 {
   font-size: 15vw;
 }
-h2 {
+h2, h3 {
   font-size: 3vw;
   font-family: cat;
   color: #092f80;
@@ -87,8 +87,12 @@ a {
   margin: 0 8px;
   border-radius: 25px;
   width: 30vw;
+  display: inline-flex;
+  justify-content: center;
 }
 #submit {
+  display: inline-flex;
+  justify-content: center;
   margin: 0 8px;
   border-radius: 25px;
   border: none;
@@ -99,16 +103,19 @@ a {
   margin: 0 8px;
   border-radius: 25px;
 }
-.button {
+
+input[type="submit"],
+button, .button, .button-primary{
   margin: 0 8px;
   border-radius: 25px;
   border: none;
   background-color: #092f80;
   color: #8DBEE8;
 }
-.button:hover {
+input[type="submit"]:hover,
+button:hover,.button:hover, .button-primary:hover{
   background-color: #8DBEE8;
-  border: 2px solid #092f80;
+  /* border: 2px solid #092f80; */
   color: #092f80;
 }
 
@@ -151,9 +158,10 @@ img {
 
 /* USER LOGGED IN */
 
+/* art comments */
 #usernotes {
   background: #4E87B0;
   text-align: center;
-  width: 50%;
+  width: 80%;
   overflow: auto;
 }
