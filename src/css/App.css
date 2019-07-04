@@ -103,6 +103,13 @@ a {
   margin: 0 8px;
   border-radius: 25px;
 }
+#username, #password{
+  margin: 0 8px;
+  border-radius: 25px;
+  width: 15vw;
+  display: inline-flex;
+  justify-content: center;
+}
 
 input[type="submit"],
 button, .button, .button-primary{
@@ -160,8 +167,13 @@ img {
 
 /* art comments */
 #usernotes {
-  background: #4E87B0;
+  background: #f8f8ff;
+  color: #092f80;
   text-align: center;
-  width: 80%;
+  width: 60%;
   overflow: auto;
+  margin: 2% 20%;
+  border-radius: 25px;
+  display: inline-flex;
+  justify-content: center;
 }
