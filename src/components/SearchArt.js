@@ -29,7 +29,6 @@ class SearchArt extends Component {
         title: art.longTitle,
         imageurl: art.webImage.url,
         usernotes: "",
-        artist: art.principalOrFirstMaker,
         userid: this.props.id
       }),
       headers: {
@@ -74,7 +73,6 @@ class SearchArt extends Component {
               return (
                 <div className="art-piece" key={art.id}>
                   <h5>{art.longTitle}</h5>
-                  <p>{art.principalOrFirstMaker}</p>
                   <img src={art.webImage.url} alt={art.title}/>
                   <br/>
                   {

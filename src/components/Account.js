@@ -34,7 +34,11 @@ class Account extends Component {
         password: ""
       })
       this.props.updateUserId(jsonData)
+      this.redirect()
     })
+  }
+  redirect = () => {
+    this.props.history.push("/search")
   }
   render() {
     return (

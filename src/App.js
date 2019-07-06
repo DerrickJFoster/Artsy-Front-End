@@ -15,8 +15,6 @@ class App extends Component {
     id: ""
   }
   updateUserId = (user) => {
-    console.log(user)
-    console.log(user.id);
     this.setState({
       username: user.username,
       id: user.id
@@ -33,21 +31,23 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1>kickstART</h1>
-          <h2>Find Inspiration And Spark Creativity</h2>
+          {
+            this.state.id !== "" ?
+            <h2 className='tracking-in-expand'>Find Inspiration And Spark Creativity | {this.state.username}</h2>
+            :
+            <h2 className='tracking-in-expand'>Find Inspiration And Spark Creativity</h2>
+          }
         </header>
         <Router>
             {
               this.state.id !== "" ?
-              <React.Fragment>
-                <h5 className="logged-in-user">Hello {this.state.username}</h5>
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
-                  <a href="#"
+                  <a href="/search"
                     onClick={this.logOut}
                     >Log Out</a>
                 </nav>
-              </React.Fragment>
               :
               <nav>
                 <Link to="/search">Search For Art</Link>
@@ -55,6 +55,9 @@ class App extends Component {
                 <Link to="/account">Join</Link>
               </nav>
             }
+            <Route path="/" exact
+            render={(props) => <SearchArt {...props} id={this.state.id}/>}
+            />
             <Route path="/search"
             render={(props) => <SearchArt {...props} id={this.state.id}/>}
             />

@@ -41,8 +41,12 @@ class LogIn extends Component {
           error: ""
         })
         this.props.updateUserId(jsonData)
+        this.redirect()
       }
     })
+  }
+  redirect = () => {
+    this.props.history.push("/search")
   }
   render() {
     return (
