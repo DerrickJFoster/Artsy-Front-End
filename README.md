@@ -1,5 +1,5 @@
 # kickstART  
-https://derrickjfoster.github.io/Artsy-Front-End/  
+https://derrickjfoster.github.io/search 
 
 * kickstART is an app for creative minded people looking for project inspiration.
 
