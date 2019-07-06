@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69e03c352686990f837c9093f424af7c",
+    "revision": "be93c12beebdf487bfbf6acb225adcac",
     "url": "/Artsy-Front-End/index.html"
   },
   {
-    "revision": "efbe974de41e45edb025",
+    "revision": "3ec890e41d8631655c97",
     "url": "/Artsy-Front-End/static/css/main.c7fb82cf.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Artsy-Front-End/static/js/2.38db990c.chunk.js"
   },
   {
-    "revision": "efbe974de41e45edb025",
-    "url": "/Artsy-Front-End/static/js/main.51fff4f1.chunk.js"
+    "revision": "3ec890e41d8631655c97",
+    "url": "/Artsy-Front-End/static/js/main.f7689804.chunk.js"
   },
   {
     "revision": "e87f9622975e41a79672",
