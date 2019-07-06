@@ -44,7 +44,7 @@ class App extends Component {
                 <nav>
                   <Link to="/search">Search For Art</Link>
                   <Link to="/favorites">Your Favorites</Link>
-                  <a href="/"
+                  <a href="/Artsy-Front-End/"
                     onClick={this.logOut}
                     >Log Out</a>
                 </nav>
