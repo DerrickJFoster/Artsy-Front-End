@@ -127,8 +127,8 @@ class SearchArt extends Component {
                         :
                         <div className="log-in-or-join">
                           <h6>Log In or Join to Save your Favorites</h6>
-                          <a href="/login" className="button">Log In</a>
-                          <a href="/account" className="button">Join</a>
+                          {/* <a href="/login" className="button">Log In</a>
+                          <a href="/account" className="button">Join</a> */}
                         </div>
                     }
                   </div>
