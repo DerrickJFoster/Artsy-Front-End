@@ -72,7 +72,7 @@ class SearchArt extends Component {
             onChange={this.handleChange}
           />
           <select id="century" onChange={this.handleChange}>
-            <option value="">Choose Century (optional)</option>
+            <option value="" defaultValue="">Choose Century (optional)</option>
             <option value="1">1st Century and Prior</option>
             <option value="2">2nd Century</option>
             <option value="3">3rd Century</option>
