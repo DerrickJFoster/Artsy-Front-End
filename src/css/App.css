@@ -142,11 +142,17 @@ a {
 
 /* SEARCH BAR */
 #keyword {
+  color: #092f80;
   margin: 0 8px;
   border-radius: 25px;
   width: 30vw;
   display: inline-flex;
   justify-content: center;
+}
+#century {
+  color: #092f80;
+  border-radius: 25px;
+
 }
 #submit {
   display: inline-flex;
