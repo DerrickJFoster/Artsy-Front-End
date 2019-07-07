@@ -23,7 +23,6 @@ class SearchArt extends Component {
     } else {
       query=`&q=${this.state.keyword}&f.dating.period=${this.state.century}`
     }
-    console.log(baseURL+query)
     fetch(baseURL+query)
     .then(data => data.json(), error => console.log(error))
     .then(jsonData => this.setState({
